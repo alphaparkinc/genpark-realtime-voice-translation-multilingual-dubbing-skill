@@ -1,0 +1,38 @@
+{
+  "name": "genpark-realtime-voice-translation-multilingual-dubbing-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time multilingual voice translation and dubbing pipeline delivering sub-500ms speech-to-speech with voice clone preservation.",
+  "author": "genpark",
+  "category": "voice",
+  "tags": [
+    "voice-translation",
+    "multilingual-dubbing",
+    "realtime-voice",
+    "speech-to-speech",
+    "livekit"
+  ],
+  "inputs": {
+    "input_audio_stream": {
+      "type": "string"
+    },
+    "source_lang": {
+      "type": "string"
+    },
+    "target_languages": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "realtime_dubbed_streams": {
+      "type": "array"
+    },
+    "average_latency_ms": {
+      "type": "integer"
+    },
+    "voice_identity_preserved": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
